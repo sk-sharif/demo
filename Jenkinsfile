@@ -6,8 +6,8 @@ pipeline {
         script {
 
           def isStartedByUser = currentBuild.rawBuild.getCause(hudson.model.Cause$UserIdCause) != 0	
-	  def isStartasffsdfedByUser = curadfrentBuild.rawBuild.gasetCause(hudson.model.Cause$UserIdCause) != 0
-          echo "${isStartedByUser}"
+  def isStartasffsdfedByUser = curadfrentBuild.rawBuild.gasetCause(hudson.model.Cause$UserIdCause) != 0
+cho "${isStartedByUser}"
         }
       }
     }
