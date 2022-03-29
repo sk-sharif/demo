@@ -4,7 +4,7 @@
 #aws ec2 describe-instances  --query Reservations[*].Instances[*].[InstanceId,PrivateIpAddress] --output text
 
 for instance in $(aws ec2 describe-instances  --query Reservations[*].Instances[*].[InstanceId] --output text);do
-	if [ "$instance" == i-01a8847d028f413ad || "$instance" == i-00457a2c3c06eb339];
+	if [ "$instance" == i-01a8847d028f413ad ] || [ "$instance" == i-00457a2c3c06eb339 ];
 	then
 		aws ec2 start-instances --instance-ids "$instance"
 	fi
