@@ -37,7 +37,7 @@ for instance in $(aws ec2 describe-instances  --query Reservations[*].Instances[
 #                echo "$instance"
 #                aws ec2 stop-instances --instance-ids $(aws ec2 describe-instances --filter Name=private-ip-address,Values="$instance" --query 'Reservations[].Instances[].InstanceId' --output text)
 #        fi
-	if [ "$instance" == i-01a8847d028f413ad || "$instance" == i-00457a2c3c06eb339];
+	if [ "$instance" == i-01a8847d028f413ad ] || [ "$instance" == i-00457a2c3c06eb339 ];
 	then
 		aws ec2 stop-instances --instance-ids "$instance"
 	fi
