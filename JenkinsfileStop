@@ -3,8 +3,8 @@ pipeline {
   stages {
      stage('Stop the service') {
       steps{
-        script {
-          echo "sharif"
+        withAWS(credentials: 'AWS-Jenkins-Cred', region: 'ap-south-1') {
+          sh './stop.sh'
         }
       }
     }
