@@ -1,0 +1,12 @@
+pipeline {
+  agent any
+  stages {
+     stage('start the services') {
+      steps{
+        script {
+          echo "sharif"
+        }
+      }
+    }
+  }
+}
