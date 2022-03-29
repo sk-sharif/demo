@@ -4,6 +4,7 @@ pipeline {
      stage('Stop the service') {
       steps{
         withAWS(credentials: 'AWS-Jenkins-Cred', region: 'ap-south-1') {
+          sh 'chmod 777 stop.sh'
           sh './stop.sh'
         }
       }
