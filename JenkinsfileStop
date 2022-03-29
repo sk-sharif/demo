@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-     stage('Build Unit test') {
+     stage('Stop the service') {
       steps{
         script {
           echo "sharif"
