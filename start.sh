@@ -36,6 +36,6 @@ for rds in "database-1 database-2";do
 	fi
 done
 
-ssh -t -t ubuntu@65.2.88.41<<EOF
+ssh ubuntu@65.2.88.41<<EOF
  bash start.sh > /dev/null 2>&1
 EOF
