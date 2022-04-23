@@ -1,11 +1,10 @@
 pipeline {
   agent any
   stages {
-     stage('Start the service') {
+     stage('start the services') {
       steps{
-        withAWS(credentials: 'AWS-Jenkins-Cred', region: 'ap-south-1') {
-          sh 'chmod 777 start.sh'
-          sh './start.sh'
+        script {
+          echo "sharif"
         }
       }
     }
